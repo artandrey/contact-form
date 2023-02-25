@@ -1,0 +1,28 @@
+.button {
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: #161616 4px solid;
+    outline-offset: 6px;
+  }
+
+  border: --background-color 2px solid;
+
+  color: var(--text-color, #fff);
+  background-color: var(--background-color, #161616);
+
+  &__main {
+    --text-color: #fff;
+    --background-color: #161616;
+  }
+
+  &__alternative {
+    --text-color: #161616;
+    --background-color: transparent;
+    border-color: #161616;
+  }
+}

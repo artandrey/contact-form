@@ -1,0 +1,24 @@
+name: Build
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  Build:
+    needs: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Downloading code
+        uses: actions/checkout@v3
+      - name: Installing node js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Caching node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Downloading npm
+        run: npm ci
+      - name: Running test
+        run: npm run build

@@ -1,0 +1,83 @@
+.input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #161616;
+  caret-color: #161616;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px hsl(0, 0%, 100%) inset !important;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  transition: transform ease-in-out 0.2s;
+  color: #3a3a3a;
+  font-size: 1rem;
+}
+
+.wrapper {
+  display: inline-block;
+  border: 2px #161616 solid;
+  padding: 1.2rem 1rem 1rem 1rem;
+  &:has([aria-invalid='true']) {
+    border-color: #c53030;
+    .placeholder {
+      color: #c53030;
+      z-index: 1;
+    }
+    .input {
+      animation: shake 0.2s ease 1 alternate;
+    }
+  }
+}
+
+.wrapper:has(:focus),
+.wrapper.focused {
+  .placeholder {
+    transform: translate(0, calc(-1.2rem - 50%));
+    &::before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 4px);
+      height: 0.5em;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(255, 255, 255);
+      z-index: -1;
+    }
+  }
+}
+
+.wrapper:has(:focus) {
+  outline: #161616 4px solid;
+  outline-offset: 6px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(10px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

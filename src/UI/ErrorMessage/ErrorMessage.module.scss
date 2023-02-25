@@ -1,0 +1,17 @@
+.message {
+  font-size: 1rem;
+  height: 0.8rem;
+  color: #c53030;
+  text-decoration: underline;
+
+  transform: translateY(10px);
+  opacity: 0;
+
+  transition: transform 0.3s, opacity 0.3s;
+
+  &__active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0;
+  }
+}

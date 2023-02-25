@@ -1,0 +1,13 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 16px;
+  }
+}
