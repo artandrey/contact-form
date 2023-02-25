@@ -28,4 +28,6 @@ const TextInput: React.FC<TextInputProps> = React.forwardRef(
   }
 );
 
+TextInput.displayName = 'TextInput';
+
 export default TextInput;

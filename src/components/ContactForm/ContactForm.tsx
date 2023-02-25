@@ -55,7 +55,7 @@ const ContactForm = () => {
           width="300"
           height="100"
         />
-        <h2>Залишити заявку на зворотній зв'язок</h2>
+        <h2>Залишити заявку на зворотній зв&#39;язок</h2>
       </div>
       <FormLayout onSubmit={handleSubmit(onSubmit)} onReset={onReset}>
         <div className={s.inputWrapper}>
@@ -65,7 +65,7 @@ const ContactForm = () => {
             render={({ field }) => (
               <TextInput
                 {...field}
-                placeholder="Ім'я"
+                placeholder="Ім&#39;я"
                 type="text"
                 aria-invalid={!!errors.firstname}
               />

@@ -3,7 +3,7 @@ import BadRequestError from '@/api-structures/errors/BadRequestError';
 import MethodNotAllowedError from '@/api-structures/errors/MethodNotAllowedError';
 import ApiResponce from '@/api-structures/responce/api-responce';
 import handleError from '@/api-util/handle-error';
-import Contacts from '@/db-models/contact';
+import Contacts from '@/db-models/contacts';
 import contactFormSchema from '@/schemas/contactFromSchema';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import '@/db/db';
