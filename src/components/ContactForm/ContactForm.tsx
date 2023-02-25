@@ -65,7 +65,7 @@ const ContactForm = () => {
             render={({ field }) => (
               <TextInput
                 {...field}
-                placeholder="Ім'я"
+                placeholder="Ім&#39;я"
                 type="text"
                 aria-invalid={!!errors.firstname}
               />
