@@ -55,7 +55,7 @@ const ContactForm = () => {
           width="300"
           height="100"
         />
-        <h2>Залишити заявку на зворотній зв'язок</h2>
+        <h2>Залишити заявку на зворотній зв&#39;язок</h2>
       </div>
       <FormLayout onSubmit={handleSubmit(onSubmit)} onReset={onReset}>
         <div className={s.inputWrapper}>
